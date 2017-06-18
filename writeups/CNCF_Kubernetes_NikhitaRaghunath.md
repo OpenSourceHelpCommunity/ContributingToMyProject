@@ -94,7 +94,7 @@ $ echo export PATH="\$PATH:$(pwd)/third_party/etcd" >> ~/.profile
 
 ### Workflow
 
-Fork the [repo](https://github.com/kubernetes/kubernetes) first and then follow these commands. Theey show the workflow you'll need to follow to install kubernetes locally.
+Fork the [repo](https://github.com/kubernetes/kubernetes) first and then follow these commands. They show the workflow you'll need to follow to install kubernetes locally.
 
 ```bash
 $ working_dir=$GOPATH/src/k8s.io

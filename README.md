@@ -4,8 +4,8 @@ Writeup from maintainers, admins, contributors on how someone can get started wi
 
 Please follow the [contributing guide](CONTRIBUTING.md) to add your own contributing guide!
 
-| Project/Organization  | Author   |
-|:---------------------:|:---------:|
-| [Multilanguage RGW Testing, Ceph](writeups/Ceph_Multilaguage-RGW-Testing_JoannahNanjekye.md) | [Joannah Nanjekye](https://github.com/nanjekyejoannah) |
-| [phpMyAdmin, phpMyAdmin](writeups/phpmyadmin_phpmyadmin_manishbisht.md) | [Manish Bisht](https://github.com/manishbisht) |
-| [Kubernetes, Cloud Native Computing Foundation](writeups/CNCF_Kubernetes_NikhitaRaghunath.md) | [Nikhita Raghunath](https://github.com/nikhita) |
+| Organization  | Project   | Author |
+|:--------------|:----------|:-------|
+| [Ceph](http://ceph.com/) | [Multilanguage RGW Testing](writeups/Ceph_Multilaguage-RGW-Testing_JoannahNanjekye.md) | [Joannah Nanjekye](https://github.com/nanjekyejoannah) |
+| [Cloud Native Computing Foundation](https://www.cncf.io/) | [Kubernetes](writeups/CNCF_Kubernetes_NikhitaRaghunath.md) | [Nikhita Raghunath](https://github.com/nikhita) |
+| [phpMyAdmin](https://www.phpmyadmin.net/) | [phpMyAdmin](writeups/phpmyadmin_phpmyadmin_manishbisht.md) | [Manish Bisht](https://github.com/manishbisht) |
