@@ -7,7 +7,7 @@ To add your own writeup, please follow these instructions:
 3. Update the README in the following format:
 
     ```
-    | OrgName | [ProjectName](writeups/orgname_projectname_yourname.md) | [YourName](https://github.com/your-github-username) |
+    | [OrgName](link-to-org-website) | [ProjectName](writeups/orgname_projectname_yourname.md) | [YourName](https://github.com/your-github-username) |
     ```
 4. Make sure you maintain alphabetical order.
 
