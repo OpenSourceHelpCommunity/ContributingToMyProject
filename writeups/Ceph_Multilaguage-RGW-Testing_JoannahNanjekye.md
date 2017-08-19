@@ -1,68 +1,237 @@
 
-## Open Source : Lessons on my Journey to Infinity and Beyond
+# How To Contribute to Ceph - RGW Testing
 
-This is a tale of a dream come true. This story starts way back in 2016. I was working as a software developer in one of the tech firms in Uganda at the time. I was not happy and had decided that I rather go back to school to pursue my Aeronautical Engineering career. I have always had a craving to contribute to open source but did not know where to start. 
+## What is Ceph
 
-I kept reading people's Github profiles in admiration of especially people that had repositories in the category of "Repositories they contribute to". I wanted this on my profile too but did not know how to. I did not have many experienced developers in my circles atleast so this kind of information I did not get easily.
+Ceph is a distributed object, block, and file storage platform. It features an interface for Amazon S3 objects inside of its Rados Gateway (RGW).
 
-One day I gave a talk at a meetup dubbed Geek night kampala on the transition from continous integration to delivery where I met some ladies who requested me to teach them alittle more on the topic a request I welcomed. After getting to know these ladies one of them told me about Rails Girls Summer of Code and suggested that we team up with her and apply for the same. Well we did and got accepted. This was the beginning to a dream coming true. I quit my job just before summer could begin in preparation for the golden opportunity.
+This RGW's S3 interface is tested and currently has three test suites in python, java and Golang that run against it. These test suites use Amazon SDKs namely boto for python, Go SDK for golang and the Java SDK for Java. In future there may be a c++ test suite as well.
 
-### First : Rails Girls Summer of Code
+## Getting Involved In Ceph Generally
 
-My open source Journey began here. I was accepted with a friend of mine to work on a project called Qutebrowser. We were called [team Echo](https://teams.railsgirlssummerofcode.org/teams/162) from Uganda. [Qutebrowser](https://github.com/qutebrowser/qutebrowser) is a vim-like browser based on PYQT5. If you are a vim fanatic then you probably want to try it. The beauty about this browser is that you browse the web using commands. Any one ? I wanted to contribute to this project because I wanted something challenging to work on and a browser wasnt bad as it had alot of new things I wanted to learn.
+Generally Contributing to the Ceph project without a very specific purpose or guidance can have a high
+barrier to entry. Usually the people that contribute significantly to Ceph are doing it on behalf of their
+company and have significant experience in linux/distributed systems/storage.
 
-RGSoC was a huge success and a very memorable experience for me as I opened my first pull request then. The mentor was very welcoming and answered every question we asked him. I learned so much working on this project than even the experience I had from work. By and large I got to know that debugging is a very important skill when working on such big code bases, got to learn alot of python as I had been working with .Net and got to meet good people in the RGSoC community.
+If someone wanted to make a contribution and weren't be mentored or employed to do so
+they would need to be quite the self starter as well because seriously contributing to
+Ceph isn't something you can just do off and on.
 
-Through RGSoC I was also able to get a diversity grant to attend and speak at pyconZA, an opportunity that I have cherished todate because the conference opened my mind to many ideas. I gave a talk on [how to contribute to open source](https://speakerdeck.com/pyconzacontributing-to-python-open-source-infrastructure-and-projects-by-joannah-nanjekye/)
+My recommendation is that you read carefully through the online documentation, watch videos
+on it, and build and run a ceph cluster. Then I suggest picking a sub-component of
+Ceph to work on (the OSD, RGW, RBD, etc.) and only focus on the component to work on.
 
-### Now : Ceph Outreachy Intern working on multilanguage RGW Testing
+Then email ceph-devel asking for a starter project on that specific
+sub-component or take a look at the bugs list and try to solve a bug that's not being
+worked on in sub-component to get a good understanding of the code.
 
-After RGSoC which was September 2016, I attempted to apply for Outreachy in the December 2016 round with Mozzilla. I did not get through but one secret is you always learn alot through the application process. I did not get in but learned a new programming language Golang that am using on my current project. To be honest I felt so frustrated not being accepted but I can not underestimate the skills I got in the whole process. I however also noted the mistakes I had done.My proposal was not as good.
+The list of open issues in Ceph are here:
+http://tracker.ceph.com/projects/devops/issues
 
-I then decided to keep my open source fire alive because I had really longed to be an active contributor. I reached out to pypy mentors in December 2016 to guide me on contributing. I therefore continued contributing to pypy until Outreachy called for applications again for the March round. I will still open PRs to pypy.
+Here is the info for mailing lists:
+http://ceph.com/irc/
 
-I applied again for the May Outreachy round and made sure I did not repeat the past mistakes however I think also luck plays a role in these kinda things because the Organisation you never expect actually accepts you. This round I applied to three companies. May 4th has been my most memorable day this year so far because on this day I signed a book contract with a publisher I have always wanted to work with and was accepted to outreachy. Double happiness right?
+## Getting Involved in RGW Testing
 
-#### About Ceph's Multilanguage RGW Testing project
+Ceph has many [projects](https://github.com/ceph). I will take you through the projects regarding RGW testing. To get involved, you have to first choose what test suite you want to contribute to and if you are not familiar with the programming language then you can go through some tutorials.
 
-I applied to ceph because of how interesting the project was. I anticipated I would build alot of capacity from working with Amazon Web services and working in three languages(Go, Java and C++) on three different test suites. My ambitious mind really wanted this. 
+### Prerequisites
 
-The project entails writing tests for aws using amazon Go, Java and C++ SDKS. RGW features an AWS s3 like interface against which tests are to be run. Ceph already had a python test suite that was testing RGW and my work was to extend the tests to the other three languages. 
+Most of the instructions in running these tests are based on the fact that you use linux. It is advisable that you get yourself any linux distro like ubuntu or fedora but I would recommend fedora.
 
-I am very willing to guide someone with my mentor if they want to contribute to these tests suites as well. There are many tests to implement so feel free to reach out if interested.
+You will also need to have a basic understanding of how to use the [Amazon s3 SDKS](https://aws.amazon.com/tools/). There is enough documentation on these SDKS. Go through the details for an sdk depending on the language of the test suite you choose. You can take a look at the developer guides below:
 
-### The Future : A luta continua
++ [AWS SDK for Go Developer guide](http://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/aws-sdk-go-dg.pdf)
++ [AWS SDK for Java Developer guide](http://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/aws-sdk-java-dg.pdf)
++ [Boto Documentation](http://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/aws-sdk-java-dg.pdf)
 
-My future in open source presents limitless opportunities. There are many places you can be but you will never be every where.I will consistently continue to contribute to the projects I have started especially with ceph. I have this passion for [PYPY](https://bitbucket.org/pypy/pypy) and believe it has a whole future a head of it because it is solving a common problem. I will thefore keep sending some patches to [pypy](https://bitbucket.org/pypy/pypy) and [qutebrowser](https://github.com/qutebrowser/qutebrowser) most likely after Outreachy because I have alot to do now.
+### Running RGW
 
-### Lessons I have learned
+Important to note is the tests run against RGW therefore you need to have it running somewhere. You can set it up in a Linux machine or virtual machine using these guidelines.
 
-#### Take every opportunity to invest in others
+Clone Ceph
 
-I heard about my first open source oportunity when I offered to teach ladies I had met while speaking some where. The morale of this is when you invest in others you are also indirectly opening up opportunities for yourself. If I had not met these ladies I probably wouldnt have known about RGSoC and in effect would not have began contributing to open source.
+You can clone from github with
 
-#### Contribute with a goal of bettering yourself and the project
+	git clone git@github.com:ceph/ceph
 
-I know people contribute to open source for many reasons. Others want to get hired, some want to be famous and others to make money from summer programs. These are all logical reasons however it is better you contribute to better yourself carreer wise. Open source gives us a platform to show case our skills as we also become better. It has the right kind of mentors to guide you in areas where you are not sure as you work on projects that are impacting many people. 
+or, if you are not a github user,
 
-The other thing you should aim at is bettering the projects you are working on. Many of the tools we use are open source and the danger is they only get better if people like us voluntarily send patches to them. I personally use open source tools from my operating system to development tools name it. If the tools we use do not get better,then we will not be productive. Rubygems.org got hacked and was down for over a week and during this time hundreds of ruby developers remembered to contribute. Let us not wait for such terrific times because even then we wont be useful as such emergencies need people that are farmiliar with the project.
+	git clone git://github.com/ceph/ceph
 
-#### Strive to learn from every failure you face
+Check out Ceph's submodules
 
-I have failed at many things in that I very much identify with failure. I mean we all fail many times.  The difference between two people that fail is the ability to learn from their mistakes and not repeat them. I failed to get into outreachy for one of the companies in the round I got accepted but from the application process I got inspired to write a book on pyton compatibility. Failure is not bad it depends on how you decide to view it. Also from failing the first time I applied, I endavoured to improve my proposal for the next round. Failure is therefore a learning opportunity.
+	git submodule update --init --recursive
 
-#### Keep trying
+Install dependencies
 
-People always succeed after trying and failing a couple of times. If you have never failed then you have probably not tried enough and if you stop trying then you will not live to land on that sucess you evision. Some open source tasks require patience as you communicate and interact with people and some times the frustration builds up and makes you want to quit. 
+	./install-deps.sh
 
-#### Keep calm and keep Koding
+Build the vstart target because that is all we need
 
-If I said the journey is smooth, it would be the lie of the century. Some reviews will frustrate you, the code will jam at times, you will burn the midnight candle at times, meet mean people. Always remember to keep calm and continue hacking. May you have the calmness to ignore the things that dont matter , the focus for things that matter and the ability to know the difference!!!
+	./do_cmake.sh
+	cd build
+	make vstart 
 
-### Good News: You never walk the Journey alone
+Run vstart
 
-Whatever you want to achieve will cost you a little patience and commitment.There are people that have walked this path.Many communities exist with people very willing to guide you on the open source journey. I have been previledged to know about the [The Open source help community](https://github.com/OpenSourceHelpCommunity/Getting-Started-With-Contributing-to-Open-Sources). A community full of individuals that want to help others to start contributing. You can reach any one there for help and join the monthly chats with experts that have walked the open source path.
+on master
 
-Maintainers are always happy to guide new contributors. There may be those exaggarated scenarios where mentors are not friendly but these are few.You just need to find a project you want to contribute to and reach out to the maintainers to see what you can work on. The best project to work on is for a project you use because then you can easily even suggest improvements to it because you are a user.
+../src/vstart.sh -n -l --rgw_num 1
 
-See you at the top!!!!
+on kraken branch
+
+../src/vstart.sh -n -l -r
+
+
+### Checking out and running the Test Suites
+
+#### Go Test suite
+
+Install Go and set GoPath
+
+Ubuntu
+
+	sudo apt-get install golang 
+	export GOPATH=$HOME/go
+
+fedora
+
+	dnf install golang 
+	export GOPATH=$HOME/go
+
+Clone the test Repository
+
+	git clone https://github.com/nanjekyejoannah/go_s3tests
+	cd go_s3tests
+
+Create Configuration by copying sample
+
+	cp config.toml.sample config.toml
+
+Install Dependencies
+
+	go get -d ./...
+
+Run the tests
+
+	cd s3tests
+	go test -v 
+
+#### Java Test suite
+
+Clone the test repository
+
+	git clone https://github.com/nanjekyejoannah/java_s3tests
+	cd java_s3tests
+
+Create Configuration by copying sample
+
+	cp config.properties.sample config.properties
+
+Install gradle
+
+Ubuntu
+
+	sudo add-apt-repository ppa:cwchien/gradle
+	sudo apt-get update
+	sudo apt-get install gradle
+
+Fedora
+
+	dnf install gradle
+
+Build the project
+
+	gradle build
+
+Run the tests
+
+	gradle test
+
+
+#### Python Test suite
+
+To get started, ensure you have the virtualenv software installed; e.g. on Debian/Ubuntu:
+
+	sudo apt-get install python-virtualenv
+
+	and then run:
+
+	./bootstrap
+
+Create a configuration file with the location of the service and two different credentials, something like this:
+
+	[DEFAULT]
+	## this section is just used as default for all the "s3 *"
+	## sections, you can place these variables also directly there
+
+	## replace with e.g. "localhost" to run against local software
+	host = s3.amazonaws.com
+
+	## uncomment the port to use something other than 80
+	# port = 8080
+
+	## say "no" to disable TLS
+	is_secure = yes
+
+	[fixtures]
+	## all the buckets created will start with this prefix;
+	## {random} will be filled with random characters to pad
+	## the prefix to 30 characters long, and avoid collisions
+	bucket prefix = YOURNAMEHERE-{random}-
+
+	[s3 main]
+	## the tests assume two accounts are defined, "main" and "alt".
+
+	## user_id is a 64-character hexstring
+	user_id = 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+
+	## display name typically looks more like a unix login, "jdoe" etc
+	display_name = youruseridhere
+
+	## replace these with your access keys
+	access_key = ABCDEFGHIJKLMNOPQRST
+	secret_key = abcdefghijklmnopqrstuvwxyzabcdefghijklmn
+
+	## replace with key id obtained when secret is created, or delete if KMS not tested
+	kms_keyid = 01234567-89ab-cdef-0123-456789abcdef
+
+	[s3 alt]
+	## another user account, used for ACL-related tests
+	user_id = 56789abcdef0123456789abcdef0123456789abcdef0123456789abcdef01234
+	display_name = john.doe
+	## the "alt" user needs to have email set, too
+	email = john.doe@example.com
+	access_key = NOPQRSTUVWXYZABCDEFG
+	secret_key = nopqrstuvwxyzabcdefghijklmnabcdefghijklm
+
+Run the tests
+
+	S3TEST_CONF=your.conf ./virtualenv/bin/nosetests
+
+### Contribute! Contribute! Contribute!
+
+You can contribute in many ways by opening an issue or working on the open issues on the projects. A good way to find issues is looking at what tests have not yet been implemented and quickly open an issue.
+
+To find something to work on, look through the to do section of the readme files of the test suites and reach out to the community IRC channel for guidance. You can also choose to work on existing open issues.
+
+Patches can be sent through by opening a pull request on the repositories.
+
+## Ping the community using these platforms
+
++ On IRC use #ceph-devel - Connect your client to: irc.oftc.net
++ Please send a mail to ceph-community@ceph.com if you would like an invite to the [Ceph slack channel](https://ceph-storage.slack.com/)
++ You can also use the mailing list ceph-devel@vger.kernel.org 
+
+## Happy Hacking!
+
+Ceph is a warm community. You may face some back and forth especially building and running ceph but remember that it always works as @amaredia says. Feel free to reachout to me (@Captain_Joannah on twitter)if you are stuck. I could also help out on especially the java and Go test suites. 
+
+## Useful Links
+
++ https://github.com/ceph
++ http://ceph.com/irc/
++ https://github.com/ceph/s3-tests
++ https://github.com/nanjekyejoannah/java_s3tests
++ https://github.com/nanjekyejoannah/go_s3tests
