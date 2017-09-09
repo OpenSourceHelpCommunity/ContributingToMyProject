@@ -28,14 +28,14 @@ WikiToLearn is a project based on MediaWiki, so we always need developers to fix
 
 #### Requirements
 * 64-Bit Computer (docker need a 64 bit system)
-* GNU/Linux with docker or Windows/OSX with virtualization compatability and enabled
+* GNU/Linux with docker or Windows/OSX with virtualization compatibility and enabled
 * Stable internet connection (download size can be up to 10 GB)
 
 This procedure may fail if you have no Internet access or if the connection is filtered by firewall – this could happen in public places such as universities, libraries, airports, etc.
 
 #### GNU/Linux installation
 ##### Prerequisites
-WTL and WTLH have some dependecies:
+WTL and WTLH have some dependencies:
 
 * any version
     * curl
@@ -58,9 +58,9 @@ WTL and WTLH have some dependecies:
 `realpath` is in `AUR`
 
 #### Docker installation
-Docker is a quickly evolving technology, and it may be possible that the your distro official repository do not have yet the docker version requierd to run WTL. We thus recommend to install docker following the [official guide](https://docs.docker.com/engine/installation/).
+Docker is a quickly evolving technology, and it may be possible that the your distro's official repository does not have the docker version required to run WTL yet. We thus recommend to install docker following the [official guide](https://docs.docker.com/engine/installation/).
 
-Do not forget to add your user to the docker group, so that you do not have to use super user privileges every time you have to manage docker images and volumes. WTLH is intended to work only if your user is added to docker group, otherwise you get errors related to missing the correct permissions since WTLH is not intended to be executed with super user rights.
+Do not forget to add your user to the docker group, so that you do not have to use super user privileges every time you have to manage docker images and volumes. WTLH is intended to work only if your user is added to docker group, otherwise you get errors related to missing the correct permissions since WTLH is not intended to be executed with super user rights. We recommend following this [guide] (https://docs.docker.com/engine/installation/linux/linux-postinstall/).
 
 #### Pandoc
 Pandoc is used to convert markdown documentation into mediawiki, that can be imported to [meta](https://meta.wikitolearn.org/Main_Page), thus this is not a real prerequisite, it is only needed if you are willing to help us keeping our online documentation up to date!
@@ -102,7 +102,7 @@ Sometimes you might want to wipe out the server and for this you can use
 
 `./instance.sh delete`
 
-Read the guide to [instance.sh](http://meta.wikitolearn.org/WikiToLearn_Home/WikitoLearn_Home_Documentation/Instance_Doc) for a deatailed description of how to use WTLH to manage the WTL instance.
+Read the guide to [instance.sh](http://meta.wikitolearn.org/WikiToLearn_Home/WikitoLearn_Home_Documentation/Instance_Doc) for a detailed description of how to use WTLH to manage the WTL instance.
 
 
 ##### Change the config and restart the dockers
@@ -128,7 +128,7 @@ Start the new instance (with the new parameters)
 
 #### Vagrant Installation for Windows/OSX
 
-WTL is build to work on GNU/Linux. It uses GNU/Linux software, enclosed inside docker containers, that require the GNU/Linux kernel. Hence, if you want to develop WTL from a Windows/OSX environment you need to install a virtual linux system. We remind yout in order do use a virtualization software, you have to enable virtalization in your BIOS, as [explained in this page](http://meta.wikitolearn.org/WikiToLearn_Home/WikitoLearn_Home_Documentation/Local_WikiToLearn_Instance/How_To_Enable_Virtualization_On_Your_PC).
+WTL is build to work on GNU/Linux. It uses GNU/Linux software, enclosed inside docker containers, that require the GNU/Linux kernel. Hence, if you want to develop WTL from a Windows/OSX environment you need to install a virtual linux system. We remind you that in order do use a virtualization software, you have to enable virtalization in your BIOS, as [explained in this page](http://meta.wikitolearn.org/WikiToLearn_Home/WikitoLearn_Home_Documentation/Local_WikiToLearn_Instance/How_To_Enable_Virtualization_On_Your_PC).
 
 ##### Vagrant Installation
 Using Vagrant is a quite simple way of using a virtual linux system for development purposes.
