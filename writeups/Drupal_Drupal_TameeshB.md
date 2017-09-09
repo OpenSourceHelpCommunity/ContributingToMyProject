@@ -54,7 +54,17 @@ You might need admin permissions to perform the above step.
 11. Navigate to localhost/drupal8 .     
 12. Select your preferred language and the default installation profile.    
 13. Add information about the database server (mysql), site database (drupal8), database user (root) and database password (the password you set) .      
-14. After all core modules are installed, complete the form regarding the site configuration.     
-
-## [Ways to contribute](https://www.drupal.org/contribute)
-## [Ladder to begin contributing](http://drupalladder.org/ladder/47217ef7-9bf5-4c7f-926f-aeee247aac78)
+14. After all core modules are installed, complete the form regarding the site configuration.   
+   
+## IRC channels:
+On freenode:  
+* #drupal (General Drupal queries)
+* #drupal-support (Drupal development queries)
+* #drupal-google (GSoC and GCI channel)  
+    
+## Important Links:
+### [Ways to contribute](https://www.drupal.org/contribute)  
+### [Ladder to begin contributing](http://drupalladder.org/ladder/47217ef7-9bf5-4c7f-926f-aeee247aac78)   
+### [Drupal Core Issue queue](https://www.drupal.org/project/issues/drupal?categories=All)   
+### [Novice issue queue](https://www.drupal.org/project/issues/search?status%5B0%5D=1&status%5B1%5D=8&status%5B2%5D=13&issue_tags_op=%3D&issue_tags=Novice)   
+### [Pending modules to port](https://contribkanban.com/board/contrib_tracker) .  
