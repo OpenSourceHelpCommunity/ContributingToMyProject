@@ -43,9 +43,9 @@ New members are always welcome.
 4. Run the following command in the command line window:  
 ~~~~
    git clone --branch 8.3.x http://git.drupal.org/project/drupal.git drupal8
-~~~~
-     This will clone Drupal 8 in the 'drupal8' folder.   
-     You might need admin permissions to perform the above step.    
+~~~~   
+    This will clone Drupal 8 in the 'drupal8' folder.     
+       You might need admin permissions to perform the above step.    
       
 5. Provide Read and Write Permissions to 'sites/default' and all its subfolders.     
    
