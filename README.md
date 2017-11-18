@@ -12,4 +12,4 @@ Please follow the [contributing guide](CONTRIBUTING.md) to add your own contribu
 | [Drupal](https://www.drupal.org/) | [Drupal](writeups/Drupal_Drupal_TameeshB.md) | [Tameesh Biswas](https://github.com/tameeshb) |
 | [phpMyAdmin](https://www.phpmyadmin.net/) | [phpMyAdmin](writeups/phpmyadmin_phpmyadmin_manishbisht.md) | [Manish Bisht](https://github.com/manishbisht) |
 | [WikiToLearn](https://www.wikitolearn.org/) | [WikiToLearn](writeups/ContributingToWikiToLearn_SrijanAgarwal.md) | [Srijan Agarwal](https://www.github.com/srijancse) | 
-| [WorldBrain](https://worldbrain.io/) | [WebMemex](writeups/worldbrain_webmemex_arpitgogia.md) | [Arpit Gogia](https://github.com/arpitgogia) |
+| [WorldBrain](https://worldbrain.io/) | [Memex](writeups/worldbrain_memex_arpitgogia.md) | [Arpit Gogia](https://github.com/arpitgogia) |
