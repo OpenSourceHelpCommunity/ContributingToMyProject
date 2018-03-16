@@ -153,7 +153,7 @@ Kubernetes is a Cloud Native Computing Foundation (CNCF) product. To contribute 
 
 ### Finding an issue to work on
 
-1. Kubernetes is a **huge** project and has more than 4,300 issues open at any given point of time. There are issue labels like [`for-new-contributors`](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+label%3Afor-new-contributors) which can help you to find potential issues you can work on. 
+1. Kubernetes is a **huge** project and has more than 4,300 issues open at any given point of time. There are issue labels like [`help wanted`](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) which can help you to find potential issues you can work on. 
 
 2. Personally, I would recommend you to go through the issues mentioned in the kubectl roadmap - especially the issues under _[improve error messages](https://github.com/kubernetes/community/wiki/Roadmap:-kubectl#improve-help--error-messages--output)_. If you don't understand how to solve an issue, that's okay, move on to the next one. But make sure that you at least _try_ to search for the code associated with the issue. At this point, it is NOT important for you to solve issues but to understand how the code is structured and understand the code. Once you see the code and feel comfortable with it, you can easily move ahead with solving issues.
 
